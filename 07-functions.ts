@@ -1,15 +1,27 @@
-
-/*
-    Basic function syntax:
-        function name (param1: type, param2: type): return_type {}
-    Use const to declare a function that will not be changed for performance reasons
-*/
-const soma = function (x: number, y: number): number {
+// function declaration
+let soma = function (x: number, y: number): number {
     return x + y;
 };
 
-// assign a variable with the function return type
-let num: number = soma(2, 3);
+// simple arrow function
+let arrow = (name:string) => {
+    return `Vinícius ${name}`
+};
+
+// smallest arrow function
+let smallest = name => `Vinícius ${name}`;
+
+// function with default parameters
+let DefaultParameters = (first_name:string, last_name:string = 'Bittencourt') => `${first_name} ${last_name}`;
+
+// function with optional parameters
+let OptionalParameters = (first_name:string, last_name?:number) => `${first_name} ${last_name}`;
+
+console.log("Function declaration: ", soma(2,2));
+console.log("Simple arrow function: ",arrow('Bittencourt'));
+console.log("Smallest arrow function: ", smallest('Bittencourt'));
+console.log("Default parameter function: ", DefaultParameters('Vinícius'));
+console.log("Optional parameter function: ", OptionalParameters('Vinícius'));
 
 /*
     Simple arrow function syntax:
@@ -17,28 +29,13 @@ let num: number = soma(2, 3);
     If the function has only one line, you can omit the curly braces and the return keyword
 
     More complex arrow function syntax:
-        const soma () => {
-            
-        }
+        const soma = () => {
+            // multiple lines
+        };
+    
+    If the function has only one parameter, you can omit the parentheses
+    If the function has only one parameter and it is an object, you must wrap the object in parentheses
+
+    Even cleaner arrow function syntax:
+        const soma = n => x + 1;
 */
-let funcao = (name:string) => {
-
-    return `Luiz Carlos ${name}`
-
-
-};
-
-let funcao1 = name => `Luiz Carlos ${name}`;
-
-
-let funcaoDefaultParameters = (first_name:string, last_name:string = 'Diniz') => {
-
-};
-
-funcaoDefaultParameters('Luiz');
-
-let funcaoOptionalParameters = (first_name:string, last_name?:number) => {
-    console.log(last_name);
-}
-
-funcaoOptionalParameters('Luiz');

@@ -16,6 +16,7 @@
 **Go to:**
 
 > [First Steps](#p01)
+>
 >* [Installing nvm](#sh01)
 >* [Installing node and npm](#sh02)
 >* [Installing typescript](#sh03)
@@ -63,13 +64,15 @@ npm -v
 npm install typescript 
 
 # globally (might have to use sudo)
-npm install g typescript
+npm install -g typescript
 
 # test TypeScript
 tsc -v
 ```
 
 <h2 id="p02">using TypeScript</h2>
+
+<p id="sh04"></p>
 
 ```bash
 # Using TypeScript commands (tsc)
